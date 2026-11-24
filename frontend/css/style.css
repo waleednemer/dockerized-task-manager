@@ -1,0 +1,24 @@
+:root{--bg:#eef2f4;--ink:#14232b;--muted:#6b7c85;--card:#fff;--line:#d5dde1;--accent:#0f766e;--high:#b42318;--medium:#c27c0e;--low:#5b8a72}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",Tahoma,sans-serif}
+main{max-width:720px;margin:0 auto;padding:2rem 1rem 4rem}
+header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.25rem}
+h1{font-size:2.4rem;margin:0}
+#count{color:var(--muted);margin:0}
+form{display:grid;grid-template-columns:1fr auto auto auto;gap:.5rem;margin-bottom:1rem}
+input,select,button{font:inherit;padding:.6rem .75rem;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+form button{background:var(--accent);border-color:var(--accent);color:#fff;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+#filters{display:flex;gap:.4rem;margin-bottom:1rem;flex-wrap:wrap}
+#filters button{cursor:pointer;border-radius:999px}
+#filters .on{background:var(--ink);color:#fff;border-color:var(--ink)}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.task{display:flex;align-items:center;gap:.75rem;background:var(--card);padding:.75rem 1rem;border-radius:6px;border-inline-start:6px solid var(--medium)}
+.task.p-high{border-color:var(--high)}.task.p-low{border-color:var(--low)}
+.task .info{flex:1;display:grid}
+.meta{color:var(--muted);font-size:.85rem}
+.task.done .title{text-decoration:line-through;color:var(--muted)}
+.del{cursor:pointer;color:var(--high)}
+#error{background:#fde8e6;color:var(--high);padding:.75rem 1rem;border-radius:6px}
+#empty{color:var(--muted);text-align:center;padding:2rem 0}
+@media(max-width:560px){form{grid-template-columns:1fr}}
